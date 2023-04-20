@@ -525,13 +525,158 @@ let number = 10;
 
 //49. Object Destructuring
 // const user = {
-//     name : nanda,
+//     name : 'nanda',
 //     age : 22,
 //     favBook : {
-
-//     }
+//         bookName: 'Think and Grow Up',
+//         bookAuthor: 'abcxyz',
+//     },
 // };
 
+// const {name, age, favBook} = user; // obejct destructuring
+// const {bookAuthor, bookName} = favBook;
+
+// console.log(name); // menampilkan value yang diambil dari object distructuring
+// console.log(age);
+// console.log(bookName);
+// console.log(bookAuthor);
+
+// console.log(user.name); // menampilkan value dengan memanggil variable dan property
+// console.log(user.age);
+// console.log(user.favBook.bookName);
+// console.log(user.favBook.bookAuthor);
+
 //50. Cloning an object
+// const user = {
+//     name : 'nanda',
+//     age : 22,
+// };
+
+// const copiedUser = {}; // membuat variabel baru dengan value 0
+// copiedUser.name = user.name; // mengambil value dari variable user
+// copiedUser.age = user.age;
+
+// for (let key in copiedUser){
+//     console.log(key, copiedUser[key]); // menampilkan key dan value dari hasil clon. untuk value ditandai dengan bracket []
+//     copiedUser[key] = user[key];
+// }
+// menggunakan method assign untuk clonning
+// const copiedUser = Object.assign({}, user);
+
+// for (let key in copiedUser){
+//     console.log(key, copiedUser[key]);
+// }
+
 //51. Math Object
+// console.log(Math.PI);
+// console.log(Math.random());
+// console.log(Math.round(5,91)); // more info how to use math object, open https://www.w3schools.com/js/js_math.asp
+
 //52. JSON Data Format
+// const user = {
+//     name : 'nanda',
+//     age : 22,
+// };
+
+// const jsonData = JSON.stringify(user); //Statement ini mengonversi objek JavaScript user menjadi JSON string dengan menggunakan metode JSON.stringify(), dan kemudian menetapkan JSON string tersebut ke variabel jsonData.
+// console.log(JSON.parse(jsonData)); //console.log(JSON.parse(jsonData));: Statement ini mengonversi JSON string yang disimpan dalam variabel jsonData menjadi objek JavaScript dengan menggunakan metode JSON.parse(), dan kemudian mencetak objek tersebut ke konsol.
+// console.log(jsonData); //console.log(jsonData);: Statement ini mencetak JSON string yang disimpan dalam variabel jsonData ke konsol.
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//Section 9: JavaSCript Functions
+//53. Function Basics
+// function declaration
+
+// function aboutMe(name, age){ // function dengan parameter
+//     const message = `I am ${name} and i am ${age} years old`; // variable dengan pemanggilan parameter
+//     console.log(message); // menampilkan value message
+// }
+
+// function calcSum(number1, number2){ // function dengan parameter
+//     let sum = number1 + number2; // variabel untuk penjumlahan
+//     return sum; // mengembalikkan nilai sum
+// }
+
+// // function call
+
+// aboutMe('Nanda', 22); // pemanggilan function dengan mengisi nilai parameter
+// let result = calcSum(20, 25); // variable untuk memanggil funstion
+// console.log(result); // menampilkan value result
+
+//54. Default Parameters
+// function calcSum(number1, number2 = 23, number3 = 27){ // variable yang dideklarasi nilai langsung maka di sebut dengan default parameter
+//     let sum = number1 + number2 + number3;
+//     return sum;
+// }
+
+// console.log(calcSum(10)); // argumen parameter
+
+//55. Function as an Expression
+// default function
+// function calcSum(number1, number2 = 23){ // variable yang dideklarasi nilai langsung maka di sebut dengan default parameter
+//         let sum = number1 + number2;
+//         return sum;
+//     }
+    
+//     console.log(calcSum(10)); // argumen parameter
+
+// // function expression
+// const calcSumExp = function(num1, num2){
+//     let sum = num1 + num2;
+//     return sum;
+// }
+// console.log(calcSumExp(24, 31)); // jangan meletakkan console sebelum initialization
+
+//56. Arrow Functions
+// const calcSumArr = (num1, num2) => num1 + num2;
+// console.log(calcSumArr(21, 43));
+
+// // convert from function expression
+// const mulByTwo = function(number1){
+//     return number1 * 3;
+// }
+// console.log(mulByTwo(5));
+
+// //=> convert
+// const mulTwoArr = (number1) => number1 * 7;
+// console.log(mulTwoArr(2));
+
+//57. Rest Parameter
+// function mulply(...args){
+//     console.log(args);
+//     //fungsi bernama multiply yang memiliki parameter ...args, 
+//     //yang akan menangkap semua argumen yang diberikan pada saat fungsi 
+//     //dipanggil dan menyimpannya ke dalam array args.
+
+//     let mulp = 1;
+//     for (let num of args){
+//         mulp = mulp * num; // menggunakan perulangan for of untuk mencetak parameter args
+//     }
+//     return mulp;
+//     // return number1 * number2 * number3 * number4;
+// }
+// console.log(mulply(3,4,2,1,3,2));
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//Section 10 : JavaScripts Arrays
+//58. Array Basics
+let magang = ['Dayat','Michael','Ciko','Ikhsan','Mangi'];
+console.log(magang);
+console.log(magang[3]);
+console.log(magang[1]);
+console.log(magang.length);
+console.log(magang[0]);
+
+//59. Adding Elements
+//60. Removing Elements
+//61. Finding Elements (Primitive Type)
+//62. Finding Elements (Reference Type)
+//63. Iterating an array
+//64. Sorting and Reversing an array
+//65. Testing the elements of the array
+//66. Combining and Slicing the array
+//67. Spread Operator
+//68. Joining Array
+//69. Mapping an array
+//70. Filtering an array
+//71. Reducing an array
