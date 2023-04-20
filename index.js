@@ -524,13 +524,13 @@ let number = 10;
 // console.log(sum);
 
 //49. Object Destructuring
-const user = {
-    name : nanda,
-    age : 22,
-    favBook : {
-        
-    }
-};
+// const user = {
+//     name : nanda,
+//     age : 22,
+//     favBook : {
+
+//     }
+// };
 
 //50. Cloning an object
 //51. Math Object
