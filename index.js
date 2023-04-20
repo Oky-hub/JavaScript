@@ -335,9 +335,6 @@ let number = 10;
         
 // }
 
-
-
-
 // Section 6
 //29. For Loop
 // let name = 'Nanda';
@@ -390,3 +387,151 @@ let number = 10;
 // for (let index in numbers){
 //     console.log(index, numbers[index]);
 // }
+
+//40. String Methods: to String, Concat, Split
+// let message = "Hi my name is Oky"
+// let temp = [1,2,3];
+// console.log(temp.toString);
+// console.log(typeof temp.toString()); // mengganti tipe data menjadi string
+
+// let m1 = 'Hi'
+// let m2 = ' My name'
+// let m3 = ' is Oky' 
+
+// let m = m1.concat(m2,m3); // menggabungkan dari beberapa variabel dengan method concat
+// console.log(m);
+
+// console.log(message.split(' ')); // membagikan menjadi setiap karakter
+
+//41. String Methods: slice, subStr, subString
+// let message = "Hi my name is HI Oky";
+// console.log(message.slice(0,5)); //mendapatkan nilai dari index 0 - 5
+// console.log(message.slice(6,12));
+// console.log(message.slice(5));
+// console.log(message.slice());
+// console.log(message.slice(0));
+// console.log(message.slice(-12, -1)); //mengubah urutan nilai
+
+// console.log(message.substring(0,5));
+// console.log(message.substt(0,4))
+
+//42. Escape Sequences
+// let message = '\tHi\\ my name is \\ "Hii\' Oky" Firnanda".\nHow are you? ';
+// console.log(message)
+
+//43. String Immutability
+// let message = 'Hi Oky';
+// message = 'Ji Oky' + ' how are you';
+// message = message + 'how are you';
+// console.log(message);
+//--------------------------------------------------------------------------------------------
+
+
+// Section 8 : Objects - The Core of JavaScript & JSON
+//44. Object Basics with Dot Bracket Notation
+// let name = 'Nanda';
+// let age = 22;
+// let hobby = 'Swimming'
+
+// const user = {
+//     name: 'Nanda',
+//     age: 22,
+//     hobby: 'Swimming'
+// }
+// console.log(user);
+
+// console.log(user.name); // menampilkan dari variabel dengan dot notation
+
+// console.log(user['name']); // menggunakan bracket notation
+
+//45. Adding, Modifying Deleting Properties
+// const user = {
+//     name: 'Nanda',
+//     age: 22,
+//     hobby: 'Swimming'
+// }
+// console.log(user);
+// //ADD
+// user.email = 'oki332023@gmail.com';
+// user['phone'] = '085369116033';
+
+// //UPDATE
+// user.hobby = 'Travelling';
+// user.age = user.age + 7;
+
+//DELETE
+// delete user.age;
+
+//46. Object Methods This Keyword
+// const user = {
+//     name: 'Nanda',
+//     age: 22,
+//     hobby: 'Swimming',
+//     friends: ['Rasyid', 'Marshall'],
+//     selectColoer : null,
+//     calculateAge: function(){
+//         console.log(`I am ${this.age} Oky Firnanda`); // menampilkan function dengan pemanggilan property keyword
+//     }
+// };
+
+// user.calculateAge(); // mengembalikkan nilai function untuk ditampilkan
+
+//47. Traversing Object Entries
+// const user = {
+//         name: 'Nanda',
+//         age: 22,
+//         hobby: 'Swimming',
+//         friends: ['Rasyid', 'Marshall'],
+// };
+
+// //one way
+// for (let key in user){
+//     console.log(key, user[key]);
+// }
+
+// // two way
+// console.log(Object.keys(user)); // menampilkan hanya bagian key property
+// console.log(Object.values(user)); // menampilkan bagian values
+
+// for (let val of Object.values(user)){
+//     console.log(val);
+// } // menampilkan values
+
+//48. Exercise Total Salary
+// const salaries = {
+//     dayat : 2400,
+//     michael : 3000,
+//     mangi : 4900,
+//     ikhsan : 5300,
+//     nanda : 6400
+// };
+
+// let sum = 0;
+
+// for (let key in salaries){ // variable key di dalam salaries
+//     console.log(key, salaries[key]); // menampilkan key dan value salaries
+//     // sum = sum + salaries[key]; // menjumlah values then simpan di sum
+//     sum += salaries[key];
+// }
+
+// console.log(sum);
+
+// console.log(Object.values(salaries));
+
+// for (let val of Object.values(salaries)){
+//     sum += val;
+// }
+// console.log(sum);
+
+//49. Object Destructuring
+const user = {
+    name : nanda,
+    age : 22,
+    favBook : {
+        
+    }
+};
+
+//50. Cloning an object
+//51. Math Object
+//52. JSON Data Format
